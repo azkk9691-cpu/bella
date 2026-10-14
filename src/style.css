@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #252b42;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  The supplied phone mockups (tele.png / mobile.png) carry large transparent
+  margins. These frames scale + offset the artwork so the phone itself exactly
+  fills the frame box, which keeps layout predictable and responsive.
+*/
+.phone-frame {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+  filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.3));
+}
+
+.phone-frame > img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: auto;
+}
+
+.phone-frame--solo {
+  max-width: 330px;
+  aspect-ratio: 870 / 1710;
+}
+
+.phone-frame--solo > img {
+  width: 257.47%;
+  left: -78.62%;
+  top: -8.42%;
+}
+
+.phone-frame--duo {
+  max-width: 540px;
+  aspect-ratio: 516 / 597;
+}
+
+.phone-frame--duo > img {
+  width: 125.58%;
+  left: -23.26%;
+  top: -27.14%;
+}
